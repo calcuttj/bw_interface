@@ -1,0 +1,26 @@
+Python helper for Bitwarden CLI
+
+Requirements:
+  -- Python 2.7 (sorry)
+     -- Python libraries (pip install <lib> ... if missing):
+       -- json
+       -- pygtk
+       -- gtk
+  -- Bitwarden CLI
+     -- To install: sudo snap install bw
+
+Usage:
+  1. Login to Bitwarden:
+    $ bw login
+    -- This starts a 'session' that you allows you to retrieve password info
+    -- It will return a session key.
+
+  2. Set BWSESSION environment variable:
+    $ export BWSESSION=<session key from above>
+
+  3. (If needed) Request a list of login names:
+    $ python bw.py list 
+
+  4. Request password from an entry in the list of logins by its name. This
+     stores the password in the clipboard (use with CTRL-V)
+    $ python bw.py <name>
