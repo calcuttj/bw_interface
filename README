@@ -15,8 +15,8 @@ Usage:
     -- This starts a 'session' that you allows you to retrieve password info
     -- It will return a session key.
 
-  2. Set BWSESSION environment variable:
-    $ export BWSESSION=<session key from above>
+  2. Set BW_SESSION environment variable:
+    $ export BW_SESSION=<session key from above>
 
   3. (If needed) Request a list of login names:
     $ python bw.py list 

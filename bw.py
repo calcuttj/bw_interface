@@ -7,14 +7,14 @@ pygtk.require('2.0')
 import gtk
 
 try:
-  session = os.environ["BWSESSION"]
+  session = os.environ["BW_SESSION"]
 except KeyError:
-  print "Error: please log in to bitwarden (using 'bw login') and set BWSESSION variable"
+  print "Error: please log in to bitwarden (using 'bw login') and set BW_SESSION variable"
   exit()
 
 
 
-cmd = ["bw", "list", "items", "--session", session]
+cmd = ["bw", "list", "items"] #, "--session", session]
 
 p = Popen(cmd, stdout=PIPE, stderr=PIPE)
 stdout, stderr = p.communicate()
