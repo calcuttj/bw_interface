@@ -42,3 +42,5 @@ for entry in parsed:
     clipboard = gtk.clipboard_get()
     clipboard.set_text(pw)
     clipboard.store()
+
+    print "Stored password in clipboard"
